@@ -140,3 +140,15 @@ audio {
     margin: 15px 0;
   }
 }
+.spin {
+  animation: spinner 10000ms linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
