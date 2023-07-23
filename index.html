@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="greet"></div>
+          <div class="bars"><i class="fa-solid fa-bars"></i></div>
+        </nav>
+        <img src="docs/Cheques.jpg" class="song-img" />
+        <h1>Cheques</h1>
+        <p>Shubh</p>
+        <audio controls id="song">
+          <source src="docs/Cheques.mp3" type="audio/mpeg" />
+        </audio>
+        <div class="progressBar">
+          <div class="currTime">00:00</div>
+          <input type="range" value="0" id="progress" />
+          <div class="duration">00:00</div>
+        </div>
+        <div class="controls">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div><i class="fa-solid fa-play" id="ctrl"></i></div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

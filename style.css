@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffe0e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.music-player {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 25px 35px;
+}
+.music-player nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.music-player nav .greet {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f53192;
+  text-shadow: 0px 5px 10px rgba(255, 26, 26, 0.22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music-player nav .bars {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #f53192;
+  box-shadow: 0px 5px 10px rgba(255, 26, 26, 0.22);
+  cursor: pointer;
+}
+.song-img {
+  width: 220px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+.music-player h1 {
+  margin-top: 25px;
+  font-size: 35px;
+  color: #333;
+  font-weight: 400;
+}
+.music-player p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #333;
+}
+audio {
+  display: none;
+}
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+#progress {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0 30px;
+  margin-top: 40px;
+  background-color: #f53192;
+  height: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  background-color: #f53192;
+  box-shadow: 0px 5px 5px rgba(255, 26, 26, 0.22);
+}
+.progressBar .currTime,
+.duration {
+  margin-top: 33px;
+}
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.controls div {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #f53192;
+  box-shadow: 0px 5px 10px rgba(255, 26, 26, 0.22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.controls div:nth-child(2) {
+  transform: scale(1.25);
+  background-color: #f53192;
+  color: #fff;
+}
+@media screen and (max-width: 500px) {
+  #progress {
+    margin: 0 20px;
+    margin-top: 38px;
+  }
+  .progressBar {
+    font-size: 15px;
+  }
+  .controls {
+    justify-content: space-between;
+  }
+  .music-player {
+    padding: 15px;
+  }
+  .music-player nav .greet {
+    font-size: 23px;
+  }
+  .controls {
+    margin-top: 50px;
+  }
+  .song-img {
+    margin-top: 20px;
+  }
+  .music-player p {
+    margin: 15px 0;
+  }
+}
