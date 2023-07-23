@@ -7,6 +7,7 @@ const playPause = document.querySelectorAll(".controls div")[1];
 const forward = document.querySelectorAll(".controls div")[2];
 const currTime = document.querySelector(".currTime");
 const duration = document.querySelector(".duration");
+const songImg = document.querySelector(".song-img");
 
 let timer = (element, time) => {
   let min = time / 60;
@@ -53,10 +54,12 @@ playPause.addEventListener("click", () => {
     song.play();
     ctrlIcon.classList.toggle("fa-play");
     ctrlIcon.classList.toggle("fa-pause");
+    songImg.classList.toggle("spin");
   } else {
     song.pause();
     ctrlIcon.classList.toggle("fa-play");
     ctrlIcon.classList.toggle("fa-pause");
+    songImg.classList.toggle("spin");
   }
 });
 
@@ -73,6 +76,7 @@ if (ctrlIcon.classList.contains("fa-play")) {
 song.onended = () => {
   ctrlIcon.classList.toggle("fa-play");
   ctrlIcon.classList.toggle("fa-pause");
+  songImg.classList.toggle("spin");
 };
 
 backward.addEventListener("click", () => {
